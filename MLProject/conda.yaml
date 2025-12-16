@@ -1,0 +1,12 @@
+name: crop-mlflow-env
+
+channels:
+  - defaults
+
+dependencies:
+  - python=3.12.7
+  - pip
+  - pip:
+      - mlflow
+      - pandas
+      - scikit-learn==1.5.2
