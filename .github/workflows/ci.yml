@@ -27,5 +27,5 @@ jobs:
         env:
           MLFLOW_DISABLE_ENV_CREATION: "true"
         run: |
-          cd MLproject
+          cd MLProject
           mlflow run . --env-manager=local
