@@ -17,13 +17,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12.7"
+          python-version: "3.12"
 
-      - name: Install MLflow & dependencies
+      - name: Install dependencies
         run: |
           pip install mlflow pandas scikit-learn==1.5.2
 
       - name: Run MLflow Project
         run: |
-          cd MLProject
-          mlflow run .
+          cd MLproject
+          mlflow run . --env-manager=local
