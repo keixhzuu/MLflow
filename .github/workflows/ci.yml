@@ -24,6 +24,8 @@ jobs:
           pip install mlflow pandas scikit-learn==1.5.2
 
       - name: Run MLflow Project
+        env:
+          MLFLOW_DISABLE_ENV_CREATION: "true"
         run: |
           cd MLproject
           mlflow run . --env-manager=local
